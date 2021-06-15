@@ -1,0 +1,26 @@
+*값형식(Value Type): 값을 복사해서 사용하는 단순 형식
+Call By Value, Pass By Value (Java, C#....) 
+int x = 5; 
+int y = x; (x의 값만 복사) 
+y = 6; 
+stack(메모리 구조:임시 변수, 지역변수, 매개변수...) 
+-------
+x(5)
+y(6) 
+-------
+
+*참조형식(Reference Type):참조를 간접적으로 복사해서 사용하는 형식(주로 객체)
+Pass By Reference, Call By Reference 
+(파이썬은 모든 형식이 참조형식이다) 
+
+Customer c1 = new Customer();
+Customer c2 = c1; (c1의 참조를 복사해서 c2에 대입) 
+
+heap(별도의 연속된 메모리 공간) 
+------------
+객체 <---------------- c1(원래 이름)
+       <---------------  c2(별명) 
+
+------------
+p = phone  (참조가 복사되서 전달) 
+ 
