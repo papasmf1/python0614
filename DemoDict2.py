@@ -40,3 +40,28 @@ print( bool([1,2,3]) )
 #(카멜표기법)      getCustomer(), setCustomer() 
 #클래스명(형식 이름): DemoCustomer(각 단어의 첫글자를 대문자로 사용)
 #(파스칼표기법)
+
+#얕은 복사
+a = [1,2,3]
+b = a 
+a[0] = 38
+print(a)
+print(b)
+print( id(a), id(b) )
+
+#깊은 복사
+a = [1,2,3]
+b = a[:] 
+a[0] = 38
+print(a)
+print(b)
+print( id(a), id(b) )
+
+#리스트가 아닌 형식이면?
+import copy 
+a = [100,200,300]
+b = copy.deepcopy(a)
+a[0] = 101
+print(a)
+print(b)
+print(id(a), id(b) )
