@@ -12,6 +12,7 @@ class BankAccount:
     def withdraw(self, amount):
         self.__balance -= amount
     #인스턴스의 문자열(내가 원하는 양식)
+    # ctrl + / 
     def __str__(self):
         return "{0} , {1} , {2}".format(self.__id, \
             self.__name, self.__balance)
@@ -21,5 +22,5 @@ account1 = BankAccount(100, "전우치", 15000)
 account1.deposit(5000)
 account1.withdraw(3000)
 #멤버 변수에 접근 (이름 변경: _클래스명__변수명)
-print(account1._BankAccount__balance)
+account1._BankAccount__balance = 13000
 print(account1)
