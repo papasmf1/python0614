@@ -46,3 +46,8 @@ f.seek(0)
 lst = f.readlines()
 print( lst )
 f.close() 
+
+#기존 파일에 첨부를 하는 경우
+f = open("c:/work/demo.txt", "wt", encoding="utf-8")
+f.write("새로운 데이터\n")
+f.close() 
