@@ -25,7 +25,7 @@ print("건수:{0}".format(len(cartoons)) )
 f = open("c:/work/webtoon.txt", "wt", encoding="utf-8")
 for item in cartoons:
     title = item.find("a")
-    print(title.text.strip())
+    print(title.text.strip()) 
     f.write(title.text.strip() + "\n")
 
 f.close() 
