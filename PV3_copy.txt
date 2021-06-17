@@ -1,0 +1,4 @@
+error 100: error 
+
+hRst = 2  ERROR 100: error 
+
