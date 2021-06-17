@@ -7,5 +7,19 @@ page = open("c:/work/test01.html", encoding="utf-8").read()
 #검색이 용이한 객체 생성
 soup = BeautifulSoup(page, "html.parser")
 #보여달라~~
-print( soup.prettify() )
+#print( soup.prettify() )
+
+#<p>태그를 전부 가져와~~ (리턴형 리스트)
+#print( soup.find_all("p") )
+
+#<p>하나를 가져와
+#print( soup.find("p") )
+
+#<p class="outer-text"> 조건이 있는 경우
+#print( soup.find_all("p", class_="outer-text") )
+
+#태그 안쪽에 컨텐츠를 출력
+for tag in soup.find_all("p"):
+    #컨텐츠만 출력
+    print( tag.text.replace("\n", "").strip() )
 
