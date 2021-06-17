@@ -2,7 +2,8 @@
 import sqlite3
 
 #커넥션객체 생성(데이터베이스를 파일로 저장) 
-con = sqlite3.connect("c:/work/test1.db")
+#정상적으로 작업을 완료(commit)
+con = sqlite3.connect("c:/work/sample.db")
 #구문을 실행할 커서 객체 
 cur = con.cursor()
 #데이터를 저장할 테이블 생성(자료구조)
@@ -25,4 +26,5 @@ print("---fetchmany(2)---")
 print( cur.fetchmany(2) ) 
 print("---fetchall()---")
 print( cur.fetchall() ) 
-
+#작업을 완료 
+con.commit()
