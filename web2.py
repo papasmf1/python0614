@@ -4,6 +4,8 @@ import urllib.request
 #뷰티플스프 
 from bs4 import BeautifulSoup
 
+
+
 #웹서버에 페이지 실행을 요청
 data = urllib.request.urlopen("http://comic.naver.com/webtoon/list.nhn?titleId=20853&weekday=fri")
 #검색이 용이한 객체
